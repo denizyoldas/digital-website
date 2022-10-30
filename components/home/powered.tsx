@@ -5,8 +5,8 @@ import IlistrationCircle from '../UI/ilistration-circle'
 
 const Powered = () => {
   return (
-    <section className="flex flex-col items-center">
-      <div>
+    <section className="flex flex-col items-center md:justify-between md:flex-row-reverse md:items-start md:text-left">
+      <div className="md:w-6/12">
         <Heading>
           Powered by talented{' '}
           <span className="relative">
@@ -23,10 +23,10 @@ const Powered = () => {
           I wrote to let them know ready to came back they kicked me of their
           team slack all of us are make company email.
         </p>
-      </div>
-      <div>
-        <Button>Learn more</Button>
-        <div>Watch videos</div>
+        <div>
+          <Button>Learn more</Button>
+          <div>Watch videos</div>
+        </div>
       </div>
       <IlistrationCircle />
     </section>

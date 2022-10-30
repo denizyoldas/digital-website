@@ -10,7 +10,7 @@ const Heading: React.FC<Props> = ({ className, children }) => {
   return (
     <div
       className={cx(
-        'font-black text-[40px] sm:text-6xl md:text-6xl lg:text-7xl text-center leading-[52px] lg:leading-[110px] text-secondary-900 pb-10',
+        'font-black text-[40px] sm:text-6xl md:text-6xl lg:text-7xl text-center md:text-left leading-[52px] lg:leading-[110px] text-secondary-900 pb-10',
         className
       )}
     >

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from './UI/button'
 import Image from 'next/image'
+import cx from 'classnames'
 
 const MENU: any = {
   '/': 'Home',
@@ -10,21 +11,33 @@ const MENU: any = {
 }
 
 const Header = () => {
+  const [active, setActive] = useState('/')
+
+  const handleActive = (path: string) => {
+    setActive(path)
+  }
+
   return (
     <header className="flex justify-between items-center py-6 sm:py-6 md:py-3 lg:py-2 xl:py-2 px-4 sm:px-5 md:px-8 lg:px-8 xl:px-8 bg-secondary-100 shadow-header">
       <div>
         <Image
-          src="/img/logo.png"
+          src="/logo.png"
           alt="digital agancy logo"
           width={84}
           height={27}
         />
       </div>
-      <div className="hidden sm:hidden md:flex lg:flex">
+      <div className="hidden sm:hidden md:flex lg:flex items-center">
         <nav>
           <ul className="flex">
             {Object.keys(MENU).map(key => (
-              <li key={key} className="mr-4">
+              <li
+                key={key}
+                className={cx('mr-4', {
+                  'border-b-4 border-b-primary-100': active === key
+                })}
+                onClick={() => handleActive(key)}
+              >
                 {MENU[key]}
               </li>
             ))}

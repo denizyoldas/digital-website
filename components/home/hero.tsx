@@ -6,7 +6,7 @@ import IlistrationCircle from '../UI/ilistration-circle'
 const Hero = () => {
   return (
     <section className="flex flex-col sm:flex-row py-16 gap-16 items-center justify-between">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center md:items-start md:w-5/12 lg:w-5/12 xl:w-4/12">
         <Heading>
           We help to Create{' '}
           <span className="bg-primary-100 text-secondary-100">Brands</span> With

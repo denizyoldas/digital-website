@@ -10,7 +10,7 @@ export default function Home() {
     // px-4 sm:px-5 md:px-8 lg:px-8 xl:px-8
     <div>
       <Header />
-      <div className="px-4 sm:px-5 md:px-8 lg:px-8 xl:px-8">
+      <div className="px-4 sm:px-5 md:px-8 lg:px-8 xl:px-36">
         <Hero />
         <Powered />
         <Enjoy />

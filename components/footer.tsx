@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-900 text-secondary-100 flex flex-col gap-6 p-8 text-center">
+    <footer className="bg-primary-900 text-secondary-100 flex flex-col md:flex-row md:justify-between gap-6 p-8 text-center">
       <div className="leading-5 font-normal text-sm">
         Copyright ©2020 Zebb Agency. All Right Reserved
       </div>

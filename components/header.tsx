@@ -3,6 +3,7 @@ import Button from './UI/button'
 import Image from 'next/image'
 import cx from 'classnames'
 import { useRouter } from 'next/router'
+import Logo from '../assets/logo.png'
 
 const MENU: any = {
   '/': 'Home',
@@ -25,12 +26,7 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center py-6 sm:py-6 md:py-3 lg:py-2 xl:py-2 px-4 sm:px-5 md:px-8 lg:px-8 xl:px-8 bg-secondary-100 shadow-header">
       <div>
-        <Image
-          src="/logo.png"
-          alt="digital agancy logo"
-          width={84}
-          height={27}
-        />
+        <Image src={Logo} alt="digital agancy logo" width={84} height={27} />
       </div>
       <div className="hidden sm:hidden md:flex lg:flex items-center">
         <nav>

@@ -3,6 +3,7 @@ import Header from '../components/header'
 import Enjoy from '../components/home/enjoy'
 import Hero from '../components/home/hero'
 import Powered from '../components/home/powered'
+import Team from '../components/home/team'
 import MobileHeader from '../components/mobile-header'
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
       <div className="px-4 sm:px-5 md:px-8 lg:px-8 xl:px-36">
         <Hero />
         <Powered />
-        {/* <Enjoy /> */}
+        <Enjoy />
+        <Team />
       </div>
       <Footer />
     </div>

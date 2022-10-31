@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from './UI/button'
 import Image from 'next/image'
 import cx from 'classnames'
+import { useRouter } from 'next/router'
 
 const MENU: any = {
   '/': 'Home',
@@ -12,8 +13,12 @@ const MENU: any = {
 
 const Header = () => {
   const [active, setActive] = useState('/')
+  const router = useRouter()
 
   const handleActive = (path: string) => {
+    if (path === '/') {
+      router.push('/')
+    }
     setActive(path)
   }
 
@@ -29,13 +34,16 @@ const Header = () => {
       </div>
       <div className="hidden sm:hidden md:flex lg:flex items-center">
         <nav>
-          <ul className="flex">
+          <ul className="flex pr-16">
             {Object.keys(MENU).map(key => (
               <li
                 key={key}
-                className={cx('mr-4', {
-                  'border-b-4 border-b-primary-100': active === key
-                })}
+                className={cx(
+                  'mr-4 cursor-pointer hover:text-primary-100 text-base font-normal leading-5 uppercase',
+                  {
+                    'border-b-4 border-b-primary-100': active === key
+                  }
+                )}
                 onClick={() => handleActive(key)}
               >
                 {MENU[key]}

@@ -17,7 +17,7 @@ const Button: React.FC<Props> = ({
   return (
     <button
       className={cx(
-        'py-4 px-5 bg-primary-900 text-base font-bold text-secondary-100 leading-[20px]',
+        'py-4 px-5 md:py-6 md:px-10 bg-primary-900 text-base font-bold text-secondary-100 leading-[20px] hover:text-white hover:bg-primary-100 transition-colors duration-300',
         className
       )}
       type={type}
